@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Reactor.hpp"
-#include "SafetySystem.hpp"
+#include "include/Reactor.hpp"
+#include "include/SafetySystem.hpp"
 
 // Deklaracja funkcji globalnej (zazwyczaj byłaby w nagłówku Utils.h, ale uprośćmy)
 void emergency_cool_down(Reactor& r);
@@ -26,6 +26,25 @@ int main() {
     // 5. Sprawdzenie po schłodzeniu
     std::cout << "\n[AUDIT AFTER FIX]..." << std::endl;
     monitor.check_reactor(core1);
+
+    std::cout << "Liczba reaktorow na start: " << Reactor::get_active_count() << std::endl;
+
+    Reactor r1("Alpha", 100, 100);
+    Reactor r2("Beta", 200, 100);
+
+    std::cout << "Liczba reaktorow: " << Reactor::get_active_count() << "\n" << std::endl;
+
+    {
+        std::cout << "   > Wchodze do bloku tymczasowego..." << std::endl;
+        Reactor r3("Gamma-Temp", 300, 100);
+        Reactor r4("Delta-Temp", 400, 100);
+        
+        std::cout << "   > Liczba reaktorow wewnatrz: " << Reactor::get_active_count() << std::endl;
+        std::cout << "   > Wychodze z bloku..." << std::endl;
+    } 
+    // Tutaj r3 i r4 są niszczone (destruktor robi --)
+
+    std::cout << "\nLiczba reaktorow po wyjsciu z bloku: " << Reactor::get_active_count() << std::endl;
 
     return 0;
 }
