@@ -8,22 +8,26 @@
 class Reward {
 private:
     RewardType type;
-    int goldValue;
+    int gold;
     Item itemReward;
     SantaClauss companionReward;
 
 public:
-    // konstruktory
-    explicit Reward(int gold);
-    explicit Reward(const Item& item);
-    explicit Reward(const SantaClauss& companion);
+    // GOLD REWARD
+    explicit Reward(int g);
 
-    RewardType getType() const;
+    // ITEM REWARD
+    explicit Reward(const Item& it);
 
+    // COMPANION REWARD
+    explicit Reward(const SantaClauss& sc);
+
+    // KONWERSJE
     explicit operator int() const;
     explicit operator Item() const;
     explicit operator SantaClauss() const;
 
+    RewardType getType() const;
 };
 
 #endif
