@@ -2,7 +2,7 @@
 #include "string"
 #include "ctime"
 
-Car::Car(std::string& brand, std::string& model, int year, int door, EngineType engine)
+Car::Car(std::string brand, std::string model, int year, int door, EngineType engine)
     : Vehicle(brand, model, year), _door(door), _engine(engine) {}
 
 std::string Car::engineToString(EngineType engine) const {
@@ -17,7 +17,7 @@ std::string Car::engineToString(EngineType engine) const {
 
 void Car::showInfo() const {
     std::cout << "CAR: { " << getBrand() << ", " << getModel()
-        << ", " << getYear() << ", " << engineToString(getEngine()) << ", " << getDoor << " }\n";
+        << ", " << getYear() << ", " << engineToString(getEngine()) << ", " << getDoor() << " }\n";
 }
 
 void Car::honk() const {

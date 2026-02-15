@@ -9,7 +9,7 @@ private:
     std::string _model;
     int _year;
 public:
-    Vehicle(std::string& brand, std::string& model, int year);
+    Vehicle(std::string brand, std::string model, int year);
     virtual ~Vehicle() = default;
 
     std::string getBrand() const { return _brand; }

@@ -1,7 +1,7 @@
 #include "Motorcycle.hpp"
 #include "string"
 
-Motorcycle::Motorcycle(std::string& brand, std::string& model, int year, DriveType driveType)
+Motorcycle::Motorcycle(std::string brand, std::string model, int year, DriveType driveType)
     : Vehicle(brand, model, year), _driveType(driveType) {}
 
 std::string Motorcycle::driveTypeToString(DriveType type) const {

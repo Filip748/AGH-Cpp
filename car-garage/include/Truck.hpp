@@ -8,7 +8,7 @@ class Truck : public Vehicle {
 private:
     int _loadCapacity;
 public:
-    Truck(std::string& brand, std::string& model, int year, int loadCapacity);
+    Truck(std::string brand, std::string model, int year, int loadCapacity);
 
     int getLoadCapacity() const { return _loadCapacity; }
 

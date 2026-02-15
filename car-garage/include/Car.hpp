@@ -16,7 +16,7 @@ private:
     int _door;
     EngineType _engine;
 public:
-    Car(std::string& brand, std::string& model, int year, int door, EngineType engine);
+    Car(std::string brand, std::string model, int year, int door, EngineType engine);
 
     std::string engineToString(EngineType engine) const;
 

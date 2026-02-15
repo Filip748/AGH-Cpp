@@ -13,7 +13,7 @@ class Motorcycle : public Vehicle {
 private:
     DriveType _driveType;
 public:
-    Motorcycle(std::string& brand, std::string& model, int year, DriveType driveType);
+    Motorcycle(std::string brand, std::string model, int year, DriveType driveType);
 
     std::string driveTypeToString(DriveType type) const;
 

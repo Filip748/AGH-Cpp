@@ -1,6 +1,6 @@
 #include "Truck.hpp"
 
-Truck::Truck(std::string& brand, std::string& model, int year, int loadCapacity)
+Truck::Truck(std::string brand, std::string model, int year, int loadCapacity)
     : Vehicle(brand, model, year), _loadCapacity(loadCapacity) {}
 
 void Truck::showInfo() const {
