@@ -17,7 +17,7 @@ void Garage::showAllVehicles() const {
 
 void Garage::makeNoise() const {
     if(vehicles.empty()) {
-        std::cout << "SILANCE";
+        std::cout << "SILENCE";
         return;
     }
 
