@@ -15,7 +15,7 @@ int main() {
 
     // 2. Dodajemy pojazdy do garażu
     // Używamy std::make_unique do tworzenia obiektów pochodnych i przekazujemy je jako wskaźniki na klasę bazową (Pojazd)
-    myGarage.addVehicle(std::make_unique<Car>("Toyota", "Corolla", 2020, 5, "Fuel"));
+    myGarage.addVehicle(std::make_unique<Car>("Toyota", "Corolla", 2020, 5, "Petrol"));
     myGarage.addVehicle(std::make_unique<Truck>("Volvo", "FH16", 2018, 20000, 4));
     myGarage.addVehicle(std::make_unique<Motorcycle>("Yamaha", "MT-07", 2022, "Chain"));
 
